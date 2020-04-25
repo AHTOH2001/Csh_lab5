@@ -37,9 +37,8 @@ namespace CshLab5
                             case 0:
                                 if (!Programmer.IsSuit(human))
                                 {
-                                    j--;
                                     err++;
-                                    err++;
+                                    j--;                                                                        
                                 }
                                 else
                                 {
@@ -92,12 +91,12 @@ namespace CshLab5
                 Human human1 = new Human(age: 19, weight: 50, height: 163, name: "VikushaNormalnaya");
                 Sportsman sportsman1 = new Sportsman(human1);
                 sportsman1.Add(new Programmer(region: Programmer.Regions.Minsk, thirdDiplomaResp: 0, secondDiplomaResp: 0, firstDiplomaResp: 2, thirdDiplomaObl: 1));
-                sportsman1.Add(new LightAthlet(_GoldMedal: 1, _SilverMedal: 0, _BronzeMedal: 0, _PowerOfLeftLeg: 123, _PowerOfRightLeg: 89));
+                sportsman1.Add(new LightAthlet(GoldMedal: 1, SilverMedal: 0, BronzeMedal: 0, PowerOfLeftLeg: 123, PowerOfRightLeg: 89));
                 sportsman1.OutInfo();
-                sportsman1["Sport Programming"] = new Programmer(region: Programmer.Regions.Minsk, thirdDiplomaResp: 0, secondDiplomaResp: 0, firstDiplomaResp: 0, thirdDiplomaObl: 1, klacSpeed: 13.2);
+                sportsman1[SpecificSport.Name.SportProgramming] = new Programmer(region: Programmer.Regions.Gomel, thirdDiplomaResp: 0, secondDiplomaResp: 0, firstDiplomaResp: 0, thirdDiplomaObl: 1, klacSpeed: 13.2);
                 sportsman1.OutInfo();
                 Sportsman sportsman2 = new Sportsman(age: 18, weight: 250, height: 183, name: "Toshunya");
-                sportsman2.Add(new Weightlifter(_GoldMedal: 1, _SilverMedal: 0, _BronzeMedal: 0));
+                sportsman2.Add(new Weightlifter(GoldMedal: 1, SilverMedal: 0, BronzeMedal: 0));
                 sportsman2.OutInfo();
             }
             Console.ReadKey();

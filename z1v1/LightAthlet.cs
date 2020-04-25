@@ -6,28 +6,25 @@ namespace CshLab5
 {
     class LightAthlet : SpecificSport
     {
-        private int GoldMedal, SilverMedal, BronzeMedal;        
+        private Medals _medals;
         private struct LegsPower
         {
             public int LeftPower, RightPower;
         }
         LegsPower Legs;
-        
-        public LightAthlet(int _GoldMedal, int _SilverMedal, int _BronzeMedal,int _PowerOfLeftLeg,int _PowerOfRightLeg)
+        public LightAthlet(int GoldMedal, int SilverMedal, int BronzeMedal, int PowerOfLeftLeg, int PowerOfRightLeg)
         {
-            GoldMedal = _GoldMedal;
-            SilverMedal = _SilverMedal;
-            BronzeMedal = _BronzeMedal;
-            Legs.LeftPower = _PowerOfLeftLeg;
-            Legs.RightPower = _PowerOfRightLeg;
+            _medals = new Medals(GoldMedal, SilverMedal, BronzeMedal);
+            Legs.LeftPower = PowerOfLeftLeg;
+            Legs.RightPower = PowerOfRightLeg;
         }
-        public override string GetSportName() => "Light Athletic";
-        public override double GetResult() => GoldMedal * 3 + SilverMedal * 2 + BronzeMedal;
+        public override Name GetSportName() => Name.LightAthletic;
+        public override double GetResult() => _medals.GetResult();
         public static bool IsSuit(Human human)
         {
             if (human.Age < 18 || human.Age > 50) return false;
             if (human.Weight < 30 || human.Weight > 140) return false;
-            if (human.Height < 120 || human.Height > 250) return false;                        
+            if (human.Height < 120 || human.Height > 250) return false;
             return true;
         }
         public override void OutInfo()
@@ -35,12 +32,7 @@ namespace CshLab5
             Console.WriteLine("This person trohi like light athletic:");
             if (Legs.LeftPower > Legs.RightPower) Console.WriteLine($"His favourite left leg has {Legs.LeftPower} power");
             else Console.WriteLine($"His favourite right leg has {Legs.RightPower} power");
-            if (GoldMedal != 0)
-                Console.WriteLine($"number of gold medals: {GoldMedal}");
-            if (SilverMedal != 0)
-                Console.WriteLine($"number of silver medals: {SilverMedal}");
-            if (BronzeMedal != 0)
-                Console.WriteLine($"number of bronze medals: {BronzeMedal}");            
+            _medals.OutInfo();
         }
     }
 }

@@ -76,6 +76,5 @@ namespace CshLab5
             Console.WriteLine("This person is{0}suit for light athletic", LightAthlet.IsSuit(this) ? " " : " not ");
             Console.WriteLine("This person is{0}suit for weightlifting", Weightlifter.IsSuit(this) ? " " : " not ");
         }
-
     }
 }
