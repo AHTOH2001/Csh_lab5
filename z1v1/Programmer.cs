@@ -10,7 +10,7 @@ namespace CshLab5
         private readonly int _secondDiplomaObl;
         private readonly int _firstDiplomaObl;
         private readonly int _thirdDiplomaResp;
-        private readonly int _secondDiplomaResp;
+        private readonly int _secondDiplomaResp; 
         private readonly int _firstDiplomaResp;
 
         private double _klacSpeed;

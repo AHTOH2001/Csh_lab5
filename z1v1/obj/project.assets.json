@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ucheba\\Labs\\2 sem\\Cshlab5\\Csh_lab3-master\\z1v1\\CshLab5.csproj",
+      "projectUniqueName": "D:\\Ucheba\\Labs\\2 sem\\Cshlab5test\\z1v1\\CshLab5.csproj",
       "projectName": "CshLab5",
-      "projectPath": "D:\\Ucheba\\Labs\\2 sem\\Cshlab5\\Csh_lab3-master\\z1v1\\CshLab5.csproj",
+      "projectPath": "D:\\Ucheba\\Labs\\2 sem\\Cshlab5test\\z1v1\\CshLab5.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Ucheba\\Labs\\2 sem\\Cshlab5\\Csh_lab3-master\\z1v1\\obj\\",
+      "outputPath": "D:\\Ucheba\\Labs\\2 sem\\Cshlab5test\\z1v1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
